@@ -1,0 +1,19 @@
+{
+  "name": "pug-sass-bulma",
+  "version": "0.0.1",
+  "description": "skeleton pug-sass-bulma-gulp",
+  "main": "gulpfile.js",
+  "repository": "https://github.com/qb-dev/gulp-pug-sass-bulma.git",
+  "author": "qb-dev",
+  "license": "MIT",
+  "dependencies": {
+    "browser-sync": "^2.24.6",
+    "bulma": "^0.7.1",
+    "bulma-start": "^0.0.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.0.1"
+  }
+}
