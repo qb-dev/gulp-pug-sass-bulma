@@ -66,7 +66,10 @@ gulp.task('sass', function() {
       .pipe(gulp.dest(root + dir + '/assets/css'))
       .pipe(browserSync.stream());
 });
-
+gulp.task('sass-watch', ['sass'], function (done) {
+    browserSync.reload();
+    done();
+});
 
 // - ###########################################################################
 // - Copy assets (css, images, scripts, etc...)
@@ -101,6 +104,8 @@ gulp.task('serve', function() {
   });
   gulp.watch(paths.scss, ['sass']);
   gulp.watch(paths.js, ['js']);
+  gulp.watch('./**/*.sass',['sass-watch']);
+  gulp.watch("public/assets/css*.css").on('change', browserSync.reload);
   gulp.watch('./**/*.pug',['pug-watch']);
   gulp.watch("public/*.html").on('change', browserSync.reload);
 });
